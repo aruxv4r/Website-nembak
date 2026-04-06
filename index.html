@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 🌹</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="particles-bg" aria-hidden="true"></div>
+
+  <section class="screen active" id="s1" aria-label="Intro">
+    <h1 class="hi-text">Hi</h1>
+    <p class="hi-sub">— a little something for you —</p>
+  </section>
+
+  <section class="screen" id="s2" aria-label="Enter your name">
+    <p class="question-text">Can I know your name, beautiful?</p>
+
+    <div class="input-wrapper">
+      <input
+        type="text"
+        id="nameInput"
+        placeholder="your name…"
+        autocomplete="off"
+        spellcheck="false"
+        maxlength="32"
+        aria-label="Your name"
+      />
+      <span class="input-line" aria-hidden="true"></span>
+    </div>
+
+    <button id="enterBtn" type="button">Continue →</button>
+  </section>
+
+  <section class="screen" id="s3" aria-label="Greeting">
+    <p class="greeting-line" id="greetingLine"></p>
+    <p class="greeting-sub">what a beautiful name…</p>
+  </section>
+
+  <div id="darkOverlay" aria-hidden="true"></div>
+
+  <section class="screen" id="s4" aria-label="Confession">
+
+    <div class="flower-wrap" id="flowerWrap" aria-hidden="true">
+      <svg class="rose-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+
+        <line
+          class="stem" id="stem"
+          x1="130" y1="225" x2="130" y2="152"
+          stroke="#4a7a4a" stroke-width="3.2" stroke-linecap="round"
+        />
+
+        <ellipse
+          class="leaf l-left" id="leafLeft"
+          cx="112" cy="197" rx="19" ry="8"
+          fill="#5a8a5a"
+          transform="rotate(-30, 112, 197)"
+        />
+        <ellipse
+          class="leaf l-right" id="leafRight"
+          cx="148" cy="208" rx="19" ry="8"
+          fill="#5a8a5a"
+          transform="rotate(30, 148, 208)"
+        />
+
+        <g class="petal" id="petal-0"
+           style="transform: rotate(0deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f9d0d8" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-1"
+           style="transform: rotate(45deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f5b8c4" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-2"
+           style="transform: rotate(90deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#ee8fa1" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-3"
+           style="transform: rotate(135deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f2a0b0" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-4"
+           style="transform: rotate(180deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f9d0d8" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-5"
+           style="transform: rotate(225deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f09cae" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-6"
+           style="transform: rotate(270deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f5b8c4" opacity="0.93"/>
+        </g>
+        <g class="petal" id="petal-7"
+           style="transform: rotate(315deg) scale(0.08); transform-origin: 130px 130px;">
+          <ellipse cx="130" cy="95" rx="18" ry="32" fill="#f2a0b0" opacity="0.93"/>
+        </g>
+
+        <circle class="c-outer" id="cOuter" cx="130" cy="130" r="23" fill="#e8637a"/>
+        <circle class="c-mid"   id="cMid"   cx="130" cy="130" r="15" fill="#c0394f"/>
+        <circle class="c-core"  id="cCore"  cx="130" cy="130" r="6"  fill="#fce8ed"/>
+
+      </svg>
+    </div>
+
+    <div class="confession-text" id="confessionText">
+      <p>
+        Can I be the one to fill your heart?<br>
+        I mean… your girlfriend&nbsp;<span aria-hidden="true">😝🌹</span>
+      </p>
+    </div>
+
+    <div class="btn-group" id="btnGroup">
+      <button class="choice-btn" id="yesBtn" type="button">Yes 💕</button>
+      <button class="choice-btn" id="noBtn"  type="button">No</button>
+    </div>
+
+  </section>
+
+  <section class="screen" id="s5" aria-label="Surprise">
+
+    <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+    <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+    <div class="surprise-inner" id="surpriseInner">
+
+      <div class="heart-big" aria-hidden="true">💖</div>
+
+      <h2 class="surprise-title">
+        You said <span class="gold-word">Yes</span>…<br>
+        You just made me the luckiest person alive.
+      </h2>
+
+      <p class="surprise-body">
+        Every morning I'll wake up grateful.<br>
+        Every night I'll thank the stars that led me to you.<br>
+        Let's write our own love story, shall we?
+      </p>
+
+      <div class="polaroid-row" aria-hidden="true">
+        <div class="polaroid" style="--rot: -4deg">
+          <div class="polaroid-icon">🌅</div>
+          morning walks
+        </div>
+        <div class="polaroid" style="--rot: 3deg">
+          <div class="polaroid-icon">☕</div>
+          coffee dates
+        </div>
+        <div class="polaroid" style="--rot: -2deg">
+          <div class="polaroid-icon">🌙</div>
+          late night talks
+        </div>
+      </div>
+
+      <p class="surprise-footer">— made with love, just for you —</p>
+
+    </div>
+
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
